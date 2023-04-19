@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFF85F ;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    color: #ffff92;
+}
+
+.container {
+    background-color: rgb(175,175,175, 0.7);
+    padding: 20px 40px;
+    border-radius: 5px;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.container a {
+    text-decoration: none;
+    color :#FFF85F;
+}
+
+.btn {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.btn:focus {
+    outline: transparent;
+    background-color: #f8eb00;
+    /* outline: 0; */
+}
+
+.btn:active {
+    transform: scale(0.98);
+    /* This gives push down affect */
+}
+
+.text {
+    margin-top: 30px;
+}
+
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid #fffcc5;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #fffcc5;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: transparent;
+    border-bottom-color: #f8eb00;
+    /* outline: 0; */
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    /* This brings the labels above the input bottom border */
+}
+
+.form-control label span {
+    display: inline-block; /* display: block in default */
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* https://css-tricks.com/advanced-css-animation-using-cubic-bezier/ */
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: #f8eb00;
+    transform: translateY(-30px); /* Bring texts up */
+}
